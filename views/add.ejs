@@ -1,0 +1,57 @@
+<%- include('./layout/header.ejs')%>
+<form action="/app/v1/persons/add" method="post" enctype="multipart/form-data">
+  <div
+    class="container p-5 w-50 bg-body-secondary mt-4 rounded shadow p-3 mb-5 bg-body-tertiary rounded"
+  >
+    <h1 class="text">Add a person</h1>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">@</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Username"
+        name="username"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <input
+        type="tel"
+        class="form-control"
+        name="phone"
+        placeholder="Person's number"
+        aria-label="Recipient's username"
+        aria-describedby="basic-addon2"
+      />
+      <span class="input-group-text" id="basic-addon2">IND +91</span>
+    </div>
+    <div class="input-group mb-3">
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        placeholder="Person's email"
+        aria-label="Recipient's username"
+        aria-describedby="basic-addon2"
+      />
+      <span class="input-group-text" id="basic-addon2">@example.com</span>
+    </div>
+
+    <div class="input-group mb-3">
+      <input
+        type="file"
+        class="form-control"
+        id="inputGroupFile02"
+        name="photo"
+      />
+      <label class="input-group-text" for="inputGroupFile02">Upload</label>
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit">Add</button>
+      <button class="btn btn-danger" type="reset">Clear</button>
+    </div>
+  </div>
+</form>
+<%- include('./layout/footer.ejs')%>
